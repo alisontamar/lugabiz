@@ -7,7 +7,7 @@ function Home() {
                 <h2 className="text-purple mt-4 mb-3 fw-bolder">Vive la experiencia</h2>
                 <div className="card position-relative">
                     <img
-                        src="https://www.mundofranquicia.com/wp-content/uploads/2016/11/PR-Sports-Bar-001-04232013-web.jpg"
+                        src="https://cdn.pixabay.com/photo/2016/12/10/02/05/blue-1896491_1280.jpg"
                         className="card-img object-fit-cover w-auto card_img-experience img-fluid"
                         alt="..."
                     />
