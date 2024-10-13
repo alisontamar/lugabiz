@@ -1,6 +1,6 @@
 import { useEffect, useState }  from "react"
-import Iheart from "../Icons/Iheart"
-import Heart from "./Heart"
+import Heart from "../components/Heart"
+import { Link } from "react-router-dom"
 
 function Card({title, body, href}) {
     const [text, setText] = useState()
