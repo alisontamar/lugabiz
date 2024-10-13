@@ -14,19 +14,19 @@ function Card({title, body, href}) {
         numberRandom()
     }, [])
     return (
-        <article className="card" style={{width:"18rem"}}>
-            <a className="nav-link" href="#">
+        <article className="card rounded shadow-sm">
+            <Link className="nav-link" to={`place/${text}`}>
                 <img
                     src="https://cotidiano.mx/wp-content/uploads/2022/10/PORTADA-LA-PERLA.jpg"
-                    className="card-img-top cursor-pointer object-fit-cover"
+                    className="card-img-top cursor-pointer object-fit-cover w-auto"
+                    style={{ "height": "12rem" }}
                     alt="..."
                 />
-            </a>
-            <div className="card-body text-purple">
+            </Link>
+            <div className="card-body">
                 <h5 className="card-title">Card title</h5>
                 <p className="card-text">
-                    This is a wider card with supporting text below as a natural lead-in
-                    to additional content. This content is a little bit longer.
+                    Ubicacion del lugar
                 </p>
             </div>
             <div className="p-2">
