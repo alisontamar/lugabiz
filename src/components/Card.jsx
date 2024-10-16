@@ -2,17 +2,20 @@ import { useEffect, useState }  from "react"
 import Heart from "../components/Heart"
 import { Link } from "react-router-dom"
 
-function Card({title, body, href}) {
-    const [text, setText] = useState()
-    useEffect(()=>{
-        async function numberRandom(){
-            const num = await fetch("https://www.random.org/integers/?num=1&min=1&max=5&col=1&base=10&format=plain&rnd=new")
-            const text = await num.text()
-            setText(text)
+function Card({ title, body, href }) {
+    const [likes, setLikes] = useState();
+    const [text, settext]= useState();
+
+    useEffect(() => {
+        async function fetchLikes() {
+            const response = await fetch("https://www.random.org/integers/?num=1&min=1&max=5&col=1&base=10&format=plain&rnd=new");
+            const text = await response.text();
+            setLikes(text);
         }
 
-        numberRandom()
-    }, [])
+        fetchLikes();
+    }, []);
+
     return (
         <article className="card rounded shadow-sm">
             <Link className="nav-link" to={`place/${text}`}>
@@ -34,8 +37,6 @@ function Card({title, body, href}) {
                 <span>{parseInt(text) > 1 ? `Les gusta a ${text} personas` : `Le gusta a ${text} persona`}</span>
             </div>
         </article>
-
-
     );
 }
 
